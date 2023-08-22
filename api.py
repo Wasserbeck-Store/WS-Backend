@@ -3,12 +3,13 @@ from flask import jsonify
 from flask_cors import CORS
 
 class Product:
-    def __init__(self, image):
+    def __init__(self, image, name):
         self.image = image
+        self.name = name
 
 
 fakeDB = {
-    "products":{ "000" : Product("Image go here")}
+    "products":{ "000" : Product("Image go here", "Leather Wallet")}
 }
 
 app = Flask(__name__)
